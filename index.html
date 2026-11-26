@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Rai! </title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style> 
+ 
+   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe0ec, #fff0f5, #ffd6e7);
+  min-height: 100vh;
+  color: #a64d79;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 650px;
+  margin: auto;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.birthday-card {
+  background: rgba(255,255,255,0.85);
+  padding: 40px 25px;
+  border-radius: 30px;
+  box-shadow: 0 10px 35px #e9a9c480;
+  animation: appear 1.2s ease;
+}
+
+.ribbon {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #d46b99;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #e875a5;
+  font-size: clamp(35px, 8vw, 55px);
+  margin: 20px 0 5px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.cake {
+  font-size: 90px;
+  margin: 20px;
+  animation: bounce 2s infinite;
+}
+
+.intro {
+  font-size: 14px;
+  line-height: 2;
+  margin: 20px auto;
+  max-width: 420px;
+}
+
+button {
+  background: #ed8eb5;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 28px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  background: #d75d91;
+  transform: scale(1.06);
+}
+
+.hidden {
+  display: none;
+}
+
+#surprise {
+  margin-top: 25px;
+  padding: 20px;
+  background: #fff0f5;
+  border-radius: 20px;
+  line-height: 2;
+  animation: appear .8s ease;
+}
+
+.links {
+  margin-top: 40px;
+}
+
+.links h2 {
+  font-family: 'Pacifico', cursive;
+  color: #d75d91;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.link-card {
+  display: block;
+  background: white;
+  color: #c75b8d;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 5px 15px #e9a9c455;
+  transition: .3s;
+}
+
+.link-card span {
+  display: block;
+  font-size: 11px;
+  font-weight: 300;
+  margin-top: 6px;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  background: #fff0f5;
+}
+
+footer {
+  margin-top: 35px;
+  font-size: 12px;
+  color: #b66a8b;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  animation: floatUp 6s linear forwards;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="hearts" id="hearts"></div>
+
+  <main class="container">
+    <div class="birthday-card">
+      <div class="ribbon"> A SPECIAL DAY </div>
+
+      <h1>Happy Birthday, Rai!</h1>
+      <h2>To the most amazing person I know </h2>
+
+      <div class="cake"></div>
+
+      <p class="intro">
+        Today is all about you!
+        I made something special just for you.
+        Click the button below to see your surprise.
+        I hope this little website makes you smile.
+      </p>
+
+      <button onclick="showSurprise()">
+        Open Your Surprise 
+      </button>
+
+      <div id="surprise" class="hidden">
+        <h2>YOU ARE SO SPECIAL! </h2>
+        <p>
+          May your day be filled with happiness,
+          laughter, love, and beautiful memories.
+          You deserve all the good things in life!
+        </p>
+        <p>Happy Birthday once again! </p>
+      </div>
+    </div>
+
+    <section class="links">
+      <h2>A Little Something For You </h2>
+
+      <a href="https://mixtape-for-you.replit.app/m/p3wswf4q"
+         target="_blank" class="link-card">
+         Your Special Mixtape
+        <span>Click to listen to your songs</span>
+      </a>
+
+      <a href="https://dear-you.cards/card/SfGS4iZzgiyazg"
+         target="_blank" class="link-card">
+         A Letter For You
+        <span>There's something I want you to read</span>
+      </a>
+
+      <a href="https://sendthesong.xyz/"
+         target="_blank" class="link-card">
+         A Song Just For You
+        <span>A song that reminds me of you</span>
+      </a>
+    </section>
+
+    <footer>
+      Made with love, just for you
+    </footer>
+  </main>
+
+  <script src="script.js">
+
+
+    
+  function showSurprise() {
+    document.getElementById("surprise").classList.remove("hidden");
+
+  }
+
+</script>
+  </script>
+</body>
+</html>
